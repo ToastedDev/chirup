@@ -42,13 +42,13 @@ export const appearance: Theme = {
       height: "24px",
     },
     socialButtonsIconButton__discord:
-      "bg-[#5865F2] hover:bg-[#5865F2]/50 hover:border hover:border-[#5865F2]/80",
+      "bg-[#5865F2] hover:bg-[#5865F2]/50 hover:border hover:border-[#5865F2]",
     socialButtonsProviderIcon__discord: "brightness-0 invert",
     socialButtonsIconButton__github:
       "bg-white hover:bg-white/30 hover:border hover:border-white/80 group",
     socialButtonsProviderIcon__github:
       "group-hover:brightness-0 group-hover:invert",
-    formButtonPrimary: "bg-sky-500 hover:bg-sky-500/40 hover:border-sky-500/80",
+    formButtonPrimary: "bg-sky-500 hover:bg-sky-500/40 hover:border-sky-500",
     formFieldLabel: {
       padding: "0px 0px 4px",
       gap: "2px",
