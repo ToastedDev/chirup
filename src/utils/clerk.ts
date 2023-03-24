@@ -17,7 +17,7 @@ export const appearance: Theme = {
       fontSize: "24px",
       lineHeight: "30px",
       textAlign: "center",
-      color: "white",
+      color: "#f1f5f9",
     },
     headerSubtitle: {
       fontFamily,
@@ -26,7 +26,7 @@ export const appearance: Theme = {
       fontSize: "14px",
       lineHeight: "20px",
       textAlign: "center",
-      color: "rgba(255, 255, 255, 0.65)",
+      color: "rgba(241, 245, 249, 0.65)",
     },
     logoBox: {
       display: "flex",
@@ -53,10 +53,10 @@ export const appearance: Theme = {
       padding: "0px 0px 4px",
       gap: "2px",
       fontFamily,
-      color: "white",
+      color: "#f1f5f9",
     },
     formFieldInput: {
-      border: "1px solid white !important",
+      border: "1px solid #f1f5f9 !important",
       borderRadius: "6px",
       display: "flex",
       flexDirection: "row",
@@ -64,10 +64,10 @@ export const appearance: Theme = {
       padding: "10px 10px 10px 16px",
       gap: "8px",
       backgroundColor: "transparent",
-      color: "white",
+      color: "#f1f5f9",
     },
     dividerText: {
-      color: "white",
+      color: "#f1f5f9",
     },
     dividerLine: {
       backgroundColor: "#404040",
@@ -86,7 +86,7 @@ export const appearance: Theme = {
       fontSize: "12px",
       lineHeight: "15px",
       textDecorationLine: "underline",
-      color: "white",
+      color: "#f1f5f9",
       "&:hover": {
         color: "#0ea5e9",
         transitionProperty:
@@ -101,7 +101,7 @@ export const appearance: Theme = {
       fontWeight: 300,
       fontSize: "12px",
       lineHeight: "15px",
-      color: "rgba(255, 255, 255, 0.65)",
+      color: "rgba(241, 245, 249, 0.65)",
     },
   },
 };
