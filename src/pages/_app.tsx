@@ -6,6 +6,7 @@ import { api } from "~/utils/api";
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
@@ -16,6 +17,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           font-family: ${inter.style.fontFamily}, sans-serif;
         }
       `}</style>
+      <Toaster position="bottom-center" />
       <Component {...pageProps} />
     </ClerkProvider>
   );
