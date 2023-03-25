@@ -1,7 +1,5 @@
 import type { Theme } from "@clerk/types";
 
-const fontFamily = "'Inter', sans-serif";
-
 export const appearance: Theme = {
   layout: {
     socialButtonsVariant: "iconButton",
@@ -12,7 +10,6 @@ export const appearance: Theme = {
   elements: {
     card: "bg-transparent shadow-none border border-neutral-700",
     headerTitle: {
-      fontFamily,
       fontWeight: 700,
       fontSize: "24px",
       lineHeight: "30px",
@@ -20,7 +17,6 @@ export const appearance: Theme = {
       color: "#f1f5f9",
     },
     headerSubtitle: {
-      fontFamily,
       fontStyle: "normal",
       fontWeight: 300,
       fontSize: "14px",
@@ -52,7 +48,6 @@ export const appearance: Theme = {
     formFieldLabel: {
       padding: "0px 0px 4px",
       gap: "2px",
-      fontFamily,
       color: "#f1f5f9",
     },
     formFieldInput: {
@@ -80,7 +75,6 @@ export const appearance: Theme = {
     footerActionLink: {
       width: "45px",
       height: "15px",
-      fontFamily,
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: "12px",
@@ -96,7 +90,6 @@ export const appearance: Theme = {
     },
     footerActionText: {
       height: "15px",
-      fontFamily,
       fontStyle: "normal",
       fontWeight: 300,
       fontSize: "12px",
