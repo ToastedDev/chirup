@@ -1,9 +1,11 @@
-import { SignInButton, useUser } from "@clerk/nextjs";
+import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import { FaGithub } from "react-icons/fa";
+import { GiEntryDoor, GiExitDoor } from "react-icons/gi";
 import { PageLayout } from "~/components/layout";
 import { LoadingPage, LoadingSpinner } from "~/components/loading";
 import { PostView } from "~/components/postView";
@@ -72,14 +74,16 @@ const Feed = () => {
 
   if (postsLoading)
     return (
-      <div className="border-b border-neutral-700 p-4">
-        <div className="flex animate-pulse gap-3">
-          <div className="h-14 w-14 rounded-full bg-neutral-800"></div>
-          <div className="flex flex-col">
-            <div className="flex gap-1 text-xs text-slate-300">
-              <span className="h-3.5 w-40 rounded bg-neutral-800"></span>
+      <div className="scrollbar-hide flex grow flex-col overflow-y-scroll">
+        <div className="border-b border-neutral-700 p-4">
+          <div className="flex animate-pulse gap-3">
+            <div className="h-14 w-14 rounded-full bg-neutral-800"></div>
+            <div className="flex flex-col">
+              <div className="flex gap-1 text-xs text-slate-300">
+                <span className="h-3.5 w-40 rounded bg-neutral-800"></span>
+              </div>
+              <span className="mt-1.5 h-7 w-80 rounded bg-neutral-800"></span>
             </div>
-            <span className="mt-1.5 h-7 w-80 rounded bg-neutral-800"></span>
           </div>
         </div>
       </div>
@@ -121,11 +125,37 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <div className="border-b border-neutral-700 p-4">
-          {isSignedIn ? <CreatePostWizard /> : <SignInButton />}
-        </div>
+        {isSignedIn ? (
+          <div className="border-b border-neutral-700 p-4">
+            <CreatePostWizard />
+          </div>
+        ) : null}
 
         <Feed />
+
+        <footer className="relative bottom-0 flex items-center justify-between p-4 text-xl">
+          <a href="https://github.com/ToastedDev/Chirup">
+            <div className="flex items-center justify-center gap-2">
+              <FaGithub />
+              <div>GitHub</div>
+            </div>
+          </a>
+          {isSignedIn ? (
+            <SignOutButton>
+              <button className="flex items-center justify-center gap-2">
+                <GiExitDoor className="text-red-500" />
+                <div>Sign out</div>
+              </button>
+            </SignOutButton>
+          ) : (
+            <SignInButton>
+              <button className="flex items-center justify-center gap-2">
+                <GiEntryDoor className="text-green-500" />
+                <div>Sign in</div>
+              </button>
+            </SignInButton>
+          )}
+        </footer>
       </PageLayout>
     </>
   );
